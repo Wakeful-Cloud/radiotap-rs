@@ -1,7 +1,9 @@
 # radiotap-rs
 
-[![continuous integration](https://github.com/Wakeful-Cloud/radiotap-rs/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/Wakeful-Cloud/radiotap-rs/actions/workflows/continuous-integration.yml)
-[![continuous deployment](https://github.com/Wakeful-Cloud/radiotap-rs/actions/workflows/continuous-deployment.yml/badge.svg)](https://github.com/Wakeful-Cloud/radiotap-rs/actions/workflows/continuous-deployment.yml)
+[![crates.io](https://img.shields.io/crates/v/radiotap-rs?style=flat-square)](https://crates.io/crates/radiotap-rs)
+[![docs.rs](https://img.shields.io/docsrs/radiotap-rs?style=flat-square&label=docs.rs)](https://docs.rs/radiotap-rs)
+[![continuous integration status](https://img.shields.io/github/actions/workflow/status/wakeful-cloud/radiotap-rs/continuous-integration.yml?style=flat-square&label=continuous%20integration)](https://github.com/Wakeful-Cloud/radiotap-rs/actions/workflows/continuous-integration.yml)
+[![continuous deployment status](https://img.shields.io/github/actions/workflow/status/wakeful-cloud/radiotap-rs/continuous-deployment.yml?style=flat-square&label=continuous%20deployment)](https://github.com/Wakeful-Cloud/radiotap-rs/actions/workflows/continuous-deployment.yml)
 
 `no_std` compatible [radiotap](https://www.radiotap.org) header encoder and decoder for Rust.
 Supports repeated fields, vendor-specific fields (both vendor-specific namespaces and vendor-
@@ -9,8 +11,8 @@ specific TLV fields), and most standard radiotap fields.
 
 ## Examples
 
-See the [`examples`](examples) directory for and [`header_tests.rs`](src/header_tests.rs) for
-usage examples.
+See the [`examples`](examples) directory and [`src/header_tests.rs`](src/header_tests.rs) for usage
+examples.
 
 ## Documentation
 

@@ -1,13 +1,17 @@
 use deku::{DekuContainerRead, DekuRead, DekuWrite, DekuWriter, writer::Writer};
 
-use crate::utils::{FieldReader, FieldWriter, RadiotapError, RadiotapField, RadiotapFieldTrait, RadiotapFieldTraitIdentifiers};
+use crate::utils::{
+  FieldReader, FieldWriter, RadiotapError, RadiotapField, RadiotapFieldTrait,
+  RadiotapFieldTraitIdentifiers,
+};
 
 /// 0-length Physical Service Data Unit (PSDU) Field
 ///
 /// The presence of this field indicates that there was no PSDU in or captured for this PPDU, only
 /// the PHY data is valid and the radiotap header is not followed by an 802.11 header.
 ///
-/// See https://www.radiotap.org/fields/0-length-PSDU.html for more information.
+/// See [www.radiotap.org/fields/0-length-PSDU.html](https://www.radiotap.org/fields/0-length-PSDU.html)
+/// for more information.
 #[derive(Clone, Debug, Default, DekuRead, DekuWrite, PartialEq)]
 #[deku(endian = "little", bit_order = "lsb")]
 pub struct PsduField {

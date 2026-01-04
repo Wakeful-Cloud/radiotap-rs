@@ -1,6 +1,9 @@
 use deku::{DekuContainerRead, DekuRead, DekuWrite, DekuWriter, writer::Writer};
 
-use crate::utils::{FieldReader, FieldWriter, RadiotapError, RadiotapField, RadiotapFieldTrait, RadiotapFieldTraitIdentifiers};
+use crate::utils::{
+  FieldReader, FieldWriter, RadiotapError, RadiotapField, RadiotapFieldTrait,
+  RadiotapFieldTraitIdentifiers,
+};
 
 /// Transmit (TX) flags field
 ///
@@ -14,7 +17,8 @@ use crate::utils::{FieldReader, FieldWriter, RadiotapError, RadiotapField, Radio
 /// When the `REORDER` bit (0x0020) is set, injected frames aren’t reordered relative to other
 /// frames that also have this bit set (even when these frames have different QoS TID values).
 ///
-/// See https://www.radiotap.org/fields/TX%20flags.html for more information.
+/// See [www.radiotap.org/fields/TX%20flags.html](https://www.radiotap.org/fields/TX%20flags.html)
+/// for more information.
 #[derive(Clone, Debug, Default, DekuRead, DekuWrite, PartialEq)]
 #[deku(endian = "little", bit_order = "lsb")]
 pub struct TxFlagsField {

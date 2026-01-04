@@ -3,7 +3,7 @@ use deku::{DekuRead, DekuWrite};
 
 /// Radiotap sub header
 ///
-/// See https://www.radiotap.org/ for more information.
+/// See [www.radiotap.org/](https://www.radiotap.org/) for more information.
 #[derive(Clone, Debug, Default, DekuRead, DekuWrite, PartialEq)]
 #[deku(endian = "little")]
 pub struct SubHeader {

@@ -1,6 +1,9 @@
 use deku::{DekuContainerRead, DekuRead, DekuWrite, DekuWriter, writer::Writer};
 
-use crate::utils::{FieldReader, FieldWriter, RadiotapError, RadiotapField, RadiotapFieldTrait, RadiotapFieldTraitIdentifiers};
+use crate::utils::{
+  FieldReader, FieldWriter, RadiotapError, RadiotapField, RadiotapFieldTrait,
+  RadiotapFieldTraitIdentifiers,
+};
 
 /// High Efficiency (HE) field
 ///
@@ -22,7 +25,8 @@ use crate::utils::{FieldReader, FieldWriter, RadiotapError, RadiotapField, Radio
 /// was captured for more than one user then multiple packets must be written into the radiotap
 /// capture.
 ///
-/// See https://www.radiotap.org/fields/HE.html for more information.
+/// See [www.radiotap.org/fields/HE.html](https://www.radiotap.org/fields/HE.html) for more
+/// information.
 #[derive(Clone, Debug, Default, DekuRead, DekuWrite, PartialEq)]
 #[deku(endian = "little", bit_order = "lsb")]
 pub struct HeField {

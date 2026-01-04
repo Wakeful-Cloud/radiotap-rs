@@ -1,10 +1,14 @@
 use deku::{DekuContainerRead, DekuRead, DekuWrite, DekuWriter, writer::Writer};
 
-use crate::utils::{FieldReader, FieldWriter, RadiotapError, RadiotapField, RadiotapFieldTrait, RadiotapFieldTraitIdentifiers};
+use crate::utils::{
+  FieldReader, FieldWriter, RadiotapError, RadiotapField, RadiotapFieldTrait,
+  RadiotapFieldTraitIdentifiers,
+};
 
 /// Receive (RX) flags field
 ///
-/// See https://www.radiotap.org/fields/RX%20flags.html for more information.
+/// See [www.radiotap.org/fields/RX%20flags.html](https://www.radiotap.org/fields/RX%20flags.html)
+/// for more information.
 #[derive(Clone, Debug, Default, DekuRead, DekuWrite, PartialEq)]
 #[deku(endian = "little", bit_order = "lsb")]
 pub struct RxFlagsField {

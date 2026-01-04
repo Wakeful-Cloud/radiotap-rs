@@ -7,7 +7,8 @@ use crate::utils::{
 
 /// dB transmit (TX) attenuation field
 ///
-/// See https://www.radiotap.org/fields/dB%20TX%20attenuation.html for more information.
+/// See [www.radiotap.org/fields/dB%20TX%20attenuation.html](https://www.radiotap.org/fields/dB%20TX%20attenuation.html)
+/// for more information.
 #[derive(Clone, Debug, Default, DekuRead, DekuWrite, PartialEq)]
 #[deku(endian = "little", bit_order = "lsb")]
 pub struct DbTxAttenuationField {

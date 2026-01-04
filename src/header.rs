@@ -42,7 +42,7 @@ use crate::{
 
 /// Radiotap header
 ///
-/// See https://www.radiotap.org/ for more information.
+/// See [www.radiotap.org/](https://www.radiotap.org/) for more information.
 #[derive(Clone, Debug, PartialEq)]
 pub struct RadiotapHeader<V>
 where

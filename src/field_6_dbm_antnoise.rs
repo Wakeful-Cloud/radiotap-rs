@@ -7,7 +7,8 @@ use crate::utils::{
 
 /// dBm antenna noise field
 ///
-/// See https://www.radiotap.org/fields/Antenna%20noise.html for more information.
+/// See [www.radiotap.org/fields/Antenna%20noise.html](https://www.radiotap.org/fields/Antenna%20noise.html)
+/// for more information.
 #[derive(Clone, Debug, Default, DekuRead, DekuWrite, PartialEq)]
 #[deku(endian = "little", bit_order = "lsb")]
 pub struct DbmAntNoiseField {

@@ -1,10 +1,14 @@
 use deku::{DekuContainerRead, DekuRead, DekuWrite, DekuWriter, writer::Writer};
 
-use crate::utils::{FieldReader, FieldWriter, RadiotapError, RadiotapField, RadiotapFieldTrait, RadiotapFieldTraitIdentifiers};
+use crate::utils::{
+  FieldReader, FieldWriter, RadiotapError, RadiotapField, RadiotapFieldTrait,
+  RadiotapFieldTraitIdentifiers,
+};
 
 /// High-Efficiency Multi-User (HE-MU) field
 ///
-/// See https://www.radiotap.org/fields/HE-MU.html for more information.
+/// See [www.radiotap.org/fields/HE-MU.html](https://www.radiotap.org/fields/HE-MU.html) for more
+/// information.
 #[derive(Clone, Debug, Default, DekuRead, DekuWrite, PartialEq)]
 #[deku(endian = "little", bit_order = "lsb")]
 pub struct HeMuField {

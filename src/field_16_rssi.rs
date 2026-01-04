@@ -1,12 +1,16 @@
 use deku::{DekuContainerRead, DekuRead, DekuWrite, DekuWriter, writer::Writer};
 
-use crate::utils::{FieldReader, FieldWriter, RadiotapError, RadiotapField, RadiotapFieldTrait, RadiotapFieldTraitIdentifiers};
+use crate::utils::{
+  FieldReader, FieldWriter, RadiotapError, RadiotapField, RadiotapFieldTrait,
+  RadiotapFieldTraitIdentifiers,
+};
 
 /// Received Signal Strength Indicator (RSSI) field
 ///
 /// Used by OpenBSD only. Clashes with RTS retries.
 ///
-/// See https://www.radiotap.org/fields/RSSI.html for more information.
+/// See [www.radiotap.org/fields/RSSI.html](https://www.radiotap.org/fields/RSSI.html) for more
+/// information.
 #[derive(Clone, Debug, Default, DekuRead, DekuWrite, PartialEq)]
 #[deku(endian = "little", bit_order = "lsb")]
 pub struct RssiField {

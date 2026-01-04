@@ -18,7 +18,8 @@ use crate::utils::{
 /// conflates channel properties (which need not be stored per packet but are more or less fixed)
 /// with packet properties (like the modulation).
 ///
-/// See https://www.radiotap.org/fields/XChannel.html for more information.
+/// See [www.radiotap.org/fields/XChannel.html](https://www.radiotap.org/fields/XChannel.html) for
+/// more information.
 #[derive(Clone, Debug, Default, DekuRead, DekuWrite, PartialEq)]
 #[deku(endian = "little", bit_order = "lsb")]
 pub struct XChannelField {

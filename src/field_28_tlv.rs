@@ -3,7 +3,8 @@ use deku::{DekuRead, DekuWrite};
 
 /// Type, Length, Value (TLV) field
 ///
-/// See https://www.radiotap.org/fields/TLV.html for more information.
+/// See [www.radiotap.org/fields/TLV.html](https://www.radiotap.org/fields/TLV.html) for more
+/// information.
 #[derive(Clone, Debug, Default, DekuRead, DekuWrite, PartialEq)]
 #[deku(endian = "little", bit_order = "lsb")]
 pub struct TlvField {

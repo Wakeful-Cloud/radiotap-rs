@@ -2,7 +2,8 @@ use deku::{DekuRead, DekuWrite};
 
 /// Vendor namespace field
 ///
-/// See https://www.radiotap.org/fields/Vendor%20Namespace.html for more information.
+/// See [www.radiotap.org/fields/Vendor%20Namespace.html](https://www.radiotap.org/fields/Vendor%20Namespace.html)
+/// for more information.
 #[derive(Clone, Debug, Default, DekuRead, DekuWrite, PartialEq)]
 #[deku(endian = "little", bit_order = "lsb")]
 pub struct VendorNamespaceField {

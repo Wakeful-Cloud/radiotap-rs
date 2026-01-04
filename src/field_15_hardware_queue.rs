@@ -1,12 +1,16 @@
 use deku::{DekuContainerRead, DekuRead, DekuWrite, DekuWriter, writer::Writer};
 
-use crate::utils::{FieldReader, FieldWriter, RadiotapError, RadiotapField, RadiotapFieldTrait, RadiotapFieldTraitIdentifiers};
+use crate::utils::{
+  FieldReader, FieldWriter, RadiotapError, RadiotapField, RadiotapFieldTrait,
+  RadiotapFieldTraitIdentifiers,
+};
 
 /// Hardware queue field
 ///
 /// Only used in OpenBSD, clashes with TX flags used by others.
 ///
-/// See https://www.radiotap.org/fields/hardware%20queue.html for more information.
+/// See [www.radiotap.org/fields/hardware%20queue.html](https://www.radiotap.org/fields/hardware%20queue.html)
+/// for more information.
 #[derive(Clone, Debug, Default, DekuRead, DekuWrite, PartialEq)]
 #[deku(endian = "little", bit_order = "lsb")]
 pub struct HardwareQueueField {

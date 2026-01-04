@@ -1,10 +1,14 @@
 use deku::{DekuContainerRead, DekuRead, DekuWrite, DekuWriter, writer::Writer};
 
-use crate::utils::{FieldReader, FieldWriter, RadiotapError, RadiotapField, RadiotapFieldTrait, RadiotapFieldTraitIdentifiers};
+use crate::utils::{
+  FieldReader, FieldWriter, RadiotapError, RadiotapField, RadiotapFieldTrait,
+  RadiotapFieldTraitIdentifiers,
+};
 
 /// Modulation and Coding Scheme (MCS) field
 ///
-/// See https://www.radiotap.org/fields/MCS.html for more information.
+/// See [www.radiotap.org/fields/MCS.html](https://www.radiotap.org/fields/MCS.html) for more
+/// information.
 #[derive(Clone, Debug, Default, DekuRead, DekuWrite, PartialEq)]
 #[deku(endian = "little", bit_order = "lsb")]
 pub struct McsField {
@@ -65,7 +69,7 @@ pub struct McsField {
 
   /// MCS rate index
   ///
-  /// See https://en.wikipedia.org/wiki/IEEE_802.11n-2009#Data_rates for more information.
+  /// See [en.wikipedia.org/wiki/IEEE_802.11n-2009#Data_rates](https://en.wikipedia.org/wiki/IEEE_802.11n-2009#Data_rates) for more information.
   pub mcs: u8,
 }
 

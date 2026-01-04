@@ -1,12 +1,16 @@
 use deku::{DekuContainerRead, DekuRead, DekuWrite, DekuWriter, writer::Writer};
 
-use crate::utils::{FieldReader, FieldWriter, RadiotapError, RadiotapField, RadiotapFieldTrait, RadiotapFieldTraitIdentifiers};
+use crate::utils::{
+  FieldReader, FieldWriter, RadiotapError, RadiotapField, RadiotapFieldTrait,
+  RadiotapFieldTraitIdentifiers,
+};
 
 /// Aggregated MAC Protocol Data Unit (A-MPDU) status field
 ///
 /// The presence of this field indicates that the frame was received as part of an a-MPDU.
 ///
-/// See https://www.radiotap.org/fields/A-MPDU%20status.html for more information.
+/// See [www.radiotap.org/fields/A-MPDU%20status.html](https://www.radiotap.org/fields/A-MPDU%20status.html)
+/// for more information.
 #[derive(Clone, Debug, Default, DekuRead, DekuWrite, PartialEq)]
 #[deku(endian = "little", bit_order = "lsb")]
 pub struct AmpduStatusField {
