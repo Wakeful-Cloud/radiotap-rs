@@ -1,5 +1,8 @@
 # radiotap-rs
 
+[![continuous integration](https://github.com/Wakeful-Cloud/radiotap-rs/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/Wakeful-Cloud/radiotap-rs/actions/workflows/continuous-integration.yml)
+[![continuous deployment](https://github.com/Wakeful-Cloud/radiotap-rs/actions/workflows/continuous-deployment.yml/badge.svg)](https://github.com/Wakeful-Cloud/radiotap-rs/actions/workflows/continuous-deployment.yml)
+
 `no_std` compatible [radiotap](https://www.radiotap.org) header encoder and decoder for Rust.
 Supports repeated fields, vendor-specific fields (both vendor-specific namespaces and vendor-
 specific TLV fields), and most standard radiotap fields.
