@@ -6,7 +6,7 @@ edition = "2024"
 authors = ["Wakeful Cloud"]
 license = "MIT OR Apache-2.0"
 categories = ["network-programming", "parser-implementations", "security"]
-keywords = ["radiotap", "frame", "80211", "802.11", "wifi"]
+keywords = ["radiotap", "frame", "80211", "wifi"]
 repository = "https://github.com/wakeful-cloud/radiotap-rs"
 readme = "README.md"
 
