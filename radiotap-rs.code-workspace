@@ -1,0 +1,25 @@
+{
+  "extensions": {
+    "recommendations": [
+      "EditorConfig.EditorConfig",
+      "tamasfe.even-better-toml",
+      "rust-lang.rust-analyzer"
+    ]
+  },
+  "folders": [
+    {
+      "path": ".",
+      "name": "root"
+    }
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "always",
+      "source.organizeImports": "always"
+    },
+    "rust-analyzer.debug.engine": "vadimcn.vscode-lldb",
+    "rust-analyzer.testExplorer": true
+  }
+}

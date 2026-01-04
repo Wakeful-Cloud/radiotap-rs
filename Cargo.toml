@@ -1,0 +1,24 @@
+[package]
+name = "radiotap-rs"
+description = "no_std compatible radiotap header encoder and decoder."
+version = "0.1.0"
+edition = "2024"
+authors = ["Wakeful Cloud"]
+license = "MIT OR Apache-2.0"
+categories = ["network-programming", "parser-implementations", "security"]
+keywords = ["radiotap", "frame", "80211", "802.11", "wifi"]
+repository = "https://github.com/wakeful-cloud/radiotap-rs"
+readme = "README.md"
+
+[dependencies]
+deku = { version = "0.20.2", features = [
+  "alloc",
+  "bits",
+], default-features = false }
+hashbrown = "0.16.1"
+num-traits = { version = "0.2.19", default-features = false }
+thiserror = { version = "2.0.17", default-features = false }
+
+[dev-dependencies]
+pretty_assertions = "1.4.1"
+rstest = "0.26.1"
